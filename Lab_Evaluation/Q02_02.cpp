@@ -8,7 +8,7 @@ int getn(int arr[], int N, int l, int r)
     {
         r = N - 1;
     }
-    if (l >= r)
+    if (l > r)
     {
         return -1;
     }
@@ -18,17 +18,13 @@ int getn(int arr[], int N, int l, int r)
     }
     else if (arr[l] >= 0 && arr[l + 1] < 0)
     {
-        return l;
+        return l+1;
     }
-    else if (arr[l] >= 0 && arr[r] >= 0)
+    else if (arr[r] >= 0)
     {
-        return getn(arr, N, r, r * 2);
+        return getn(arr, N, r+1, r * 2);
     }
-    else if (arr[l] < 0 && arr[r] < 0)
-    {
-        return getn(arr, N, l / 2, r / 2);
-    }
-    else if (arr[l] >= 0 && arr[r] < 0)
+    else
     {
         return getn(arr, N, l + 1, (l + r) / 2);
     }
