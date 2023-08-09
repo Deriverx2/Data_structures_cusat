@@ -4,7 +4,7 @@ using std::cout,std::cin,std::endl;
 
 void insSort(unsigned int* arr, int N){
     for (int i = 1; i < N; i++) {
-        double key=arr[i];
+        unsigned int key=arr[i];
         int j=i-1;
         while(j>=0 && arr[j]>key){
             arr[j+1]=arr[j];
@@ -22,7 +22,7 @@ int main()
     cout<<"Enter number of Elements:";
     cin>>N;
     unsigned int arr[N];
-    cout<<"ENter elements";
+    cout<<"Enter elements";
     for (int i = 0; i < N; i++) {
         cin>>arr[i];
     }
