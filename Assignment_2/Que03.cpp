@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+
 using std::cout,std::cin,std::endl,std::string;
 
 void stringSort(string* arr, int N){
