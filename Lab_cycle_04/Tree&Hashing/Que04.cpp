@@ -16,7 +16,7 @@ private:
 
     // Second hash function for double hashing
     int hash2(int key) {
-        return 7 - (key % 7); // This is just an example; you can use a different second hash function.
+        return 7 - (key % 7); 
     }
 
 public:
